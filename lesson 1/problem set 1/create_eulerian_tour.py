@@ -11,10 +11,12 @@ def edge(x, y):
 def create_tour(nodes):
     # your code here
     tour = []
-    l = len(nodes)
-    for i in range(l):
-        t = edge(nodes[i], nodes[(i+1) % l])
+    print len(nodes)
+    for i in range(len(nodes)):
+        print i
+        t = edge(nodes[i], nodes[(i+1) % len(nodes)])
         tour.append(t)
+    print tour
     return tour
     
 
