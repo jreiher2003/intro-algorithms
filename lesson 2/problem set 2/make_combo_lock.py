@@ -12,17 +12,9 @@ def make_link(G, node1, node2):
 
 def create_combo_lock(nodes):
     G = {}
-    for i, _ in enumerate(nodes):
-        
-        if i <= len(nodes) - 2:
-            make_link(G, nodes[i], nodes[i+1])
-            make_link(G, nodes[0], nodes[i+1])
-    # first_node = nodes[0]
-    # i = 0
-    # for i in range(first_node, len(nodes)):
-    #     make_link(G, first_node, nodes[i])
-    # i+=1
-    print G
+    for i in range(len(nodes)-1):
+        make_link(G, nodes[i], nodes[i+1])
+        make_link(G, 0, nodes[i])
     return G
 lst = [0,1,2,3,4,5]
 create_combo_lock(lst)
